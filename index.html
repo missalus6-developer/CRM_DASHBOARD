@@ -396,23 +396,12 @@
 
 <div class="container">
 
-  <!-- Setup Instructions -->
-  <div id="setup-instructions" class="instructions">
-    <h3>📋 Connect your Google Sheet (one-time setup)</h3>
-    <ol>
-      <li>Open your PO sheet in <strong>Google Sheets</strong></li>
-      <li>Go to <strong>File → Share → Publish to web</strong></li>
-      <li>Select sheet: <code>SCAN_UPLOAD_DATA</code> &nbsp;|&nbsp; Format: <strong>CSV</strong></li>
-      <li>Click <strong>Publish</strong> and copy the URL</li>
-      <li>Paste it below and click <strong>Load Sheet</strong></li>
-    </ol>
-  </div>
+  <!-- Setup instructions removed - URL is hardcoded -->
+  <div id="setup-instructions" style="display:none;"></div>
 
-  <!-- Sync Bar -->
-  <div class="sync-bar">
-    <span style="font-weight:600;white-space:nowrap;">📡 Sheet URL:</span>
-    <input type="text" id="sheet-url" placeholder="Paste your published Google Sheets CSV URL here..." />
-    <button class="btn btn-primary btn-sm" onclick="loadSheet()">Load Sheet</button>
+  <!-- Sync Bar (hidden - URL is hardcoded) -->
+  <div class="sync-bar" style="justify-content:flex-end;">
+    <input type="hidden" id="sheet-url" />
     <button class="btn btn-sm" onclick="refreshSheet()" title="Refresh data">↻ Refresh</button>
     <div class="sync-status">
       <div class="dot" id="sync-dot"></div>
